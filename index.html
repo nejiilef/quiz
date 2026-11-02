@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quiz Web : quiz interactif pour tester ses connaissances en HTML, CSS et JavaScript.">
+    <title>Quiz Web</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Quiz Web</h1>
+    </header>
+
+    <main>
+        <!-- Page d'accueil -->
+        <section id="accueil" class="carte">
+            <h2>Bienvenue sur Quiz Web !</h2>
+            <p>Testez vos connaissances en développement web avec un quiz ludique sur HTML, CSS et JavaScript.</p>
+
+            <div class="themes">
+                <div class="theme">
+                    <h3>HTML</h3>
+                    <p>Les balises et la structure d'une page.</p>
+                </div>
+                <div class="theme">
+                    <h3>CSS</h3>
+                    <p>Les styles et la mise en page.</p>
+                </div>
+                <div class="theme">
+                    <h3>JavaScript</h3>
+                    <p>Les bases du langage.</p>
+                </div>
+            </div>
+
+            <h3>Règles du jeu</h3>
+            <ul class="regles">
+                <li>Le quiz contient 6 questions : QCM et Vrai/Faux.</li>
+                <li>Vous avez 15 secondes par question.</li>
+                <li>Une bonne réponse rapporte 10 points.</li>
+                <li>Pénalité : -1 point toutes les 3 secondes écoulées.</li>
+                <li>Mauvaise réponse ou temps écoulé : 0 point.</li>
+            </ul>
+
+            <button type="button" id="btn-commencer">Commencer le quiz</button>
+
+            <h3>Meilleurs scores</h3>
+            <ol class="meilleurs" id="meilleurs-accueil"></ol>
+        </section>
+
+        <!-- Interface du quiz -->
+        <section id="quiz" class="carte" hidden>
+            <div class="infos">
+                <p id="numero">Question 1 / 6</p>
+                <p id="chrono" role="timer">15 s</p>
+                <p>Score : <span id="score">0</span></p>
+            </div>
+
+            <!-- Barre de progression -->
+            <div class="progression" role="progressbar" aria-label="Progression du quiz" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progression">
+                <div class="progression-barre" id="barre"></div>
+            </div>
+
+            <h2 id="question">Question</h2>
+            <div id="reponses" class="reponses"></div>
+            <p id="feedback" aria-live="polite"></p>
+            <button type="button" id="btn-suivant" hidden>Question suivante</button>
+        </section>
+
+        <!-- Score final -->
+        <section id="resultat" class="carte" hidden>
+            <h2>Score final</h2>
+            <p id="score-final">0 / 60</p>
+            <p id="message-record"></p>
+            <h3>Meilleurs scores</h3>
+            <ol class="meilleurs" id="meilleurs-resultat"></ol>
+            <button type="button" id="btn-rejouer">Rejouer</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Mini-projet Web FIA3 · ISSAT Sousse · A.U. 2025/2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

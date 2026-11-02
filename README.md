@@ -1,6 +1,6 @@
 # Quiz Web
 
-Mini-projet Web FIA3 - ISSAT Sousse - A.U. 2025/2026
+Mini-projet Web  - ISSAT Sousse - A.U. 2025/2026
 Sujet 7 : Page de quiz interactif
 
 ## Description
@@ -25,6 +25,5 @@ Ouvrir `index.html` dans un navigateur, ou utiliser l'extension Live Server de V
 
 ## Auteurs
 
-- Étudiant 1 :
-- Étudiant 2 :
+-Neji Ilef
 "# quiz" 
